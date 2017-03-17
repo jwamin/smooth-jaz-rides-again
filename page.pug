@@ -2,8 +2,8 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-      title= pageTitle
-      style(type='text/css').
+    title= pageTitle
+    style(type='text/css').
       html,body{
         height:100%;
         width:100%;
@@ -11,6 +11,7 @@ html(lang="en")
         border:0;
         font-family:sans-serif;
         user-select:none;
+        overflow: hidden;
       }
       .container{
         height:100%;
@@ -40,13 +41,13 @@ html(lang="en")
         font-size:0.5em;
         color:#B4B4B4;
       }
-      link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
-      script(type='text/javascript').
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    script(type='text/javascript').
       window.onclick = function(){
         window.location.reload(true);
       }
-      body
-        .container
-          h1!= jazism
-          footer
-            small A laugh, by Joss Manger. Concept by Lawrence Glen.
+  body
+    .container
+      h1!= jazism
+    footer
+      small A laugh, by Joss Manger. Concept by Lawrence Glen.
