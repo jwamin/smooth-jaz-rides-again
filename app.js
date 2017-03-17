@@ -14,12 +14,24 @@ port = process.env.PORT || 8000,
 
 //List of messages
 jazisms = [
-  "Stick it in an iframe",
   "Maaaaaate",
   "MAAAAAATTTEEEE",
-  "Ajax it in",
-  "Job done",
-  "Why havent you guys job-done'd this yet?"
+  "Job Done",
+  "AJAX it in",
+  "Stick it in an iFrame",
+  "Job Done...",
+  "Stick it in a WebView",
+  "Job Done.",
+  "...job done",
+  "J O B D O N E",
+  "Job done?",
+  "Why haven't you guys job done'd this yet?",
+  "Have you turned it on and off again?",
+  "Don't forget to clear the cache",
+  "MAAAAAAAAAAATTTTTEEEEEEEE",
+  "Stick it on heroku",
+  "Chromecast it.",
+  "I've made it to Oxford"
 ],
 
 //List of entrance animations from animate.css
