@@ -10,7 +10,7 @@ html(lang="en")
         margin:0;
         border:0;
         font-family:sans-serif;
-        
+        user-select:none;
       }
       .container{
         height:100%;
@@ -29,7 +29,22 @@ html(lang="en")
       .container h1 span{
         mix-blend-mode:multiply;
       }
-      
+      footer{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        margin:1em 0;
+        font-size:0.5em;
+        color:#B4B4B4;
+      }
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    script(type='text/javascript').
+        window.onclick = function(){
+          window.location.reload(true);
+        }
   body
     .container
       h1!= jazism
+    footer
+      small A laugh, by Joss Manger 

@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "pug-lint-config-clock": "^2.0.0"
   }
 }
