@@ -130,6 +130,9 @@ function fuckItUp(string){
   var letters = string.split("");
 
   for(var i=0;i<letters.length;i++){
+
+    letters[i] = (letters[i] === " ") ? "&nbsp;" : letters[i];
+
     var randomanimation = animations[Math.floor(Math.random()*animations.length)];
     letters[i] = `<span class="animated `+randomanimation+`" style="display:inline-block;color:`+getRandomColor()+`">`+letters[i]+`</span>`;
   }
