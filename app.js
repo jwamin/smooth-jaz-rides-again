@@ -107,7 +107,7 @@ server.on('clientError', (err, socket) => {
 });
 
 //listen on port
-server.listen(8000)
+server.listen(process.env.PORT || 8000)
 
 /*
 * HELPER FUNCTIONS
