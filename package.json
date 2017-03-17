@@ -1,0 +1,16 @@
+{
+  "name": "smoothjaz-rides-again",
+  "version": "1.0.0",
+  "description": "smooth jaz",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-beta11"
+  }
+}

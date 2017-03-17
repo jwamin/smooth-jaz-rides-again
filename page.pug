@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title= pageTitle
+    style(type='text/css').
+      html,body{
+        height:100%;
+        width:100%;
+        margin:0;
+        border:0;
+        font-family:sans-serif;
+        
+      }
+      .container{
+        height:100%;
+        width:100%;
+        display: table;
+        text-align: center;
+      }
+      
+      .container h1{
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 10em;
+        letter-spacing: -0.15em;
+      }
+      
+      .container h1 span{
+        mix-blend-mode:multiply;
+      }
+      
+  body
+    .container
+      h1!= jazism
