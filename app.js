@@ -10,6 +10,9 @@ Original Concept by Lawrence Glen and Joss Manger
 const http = require("http"),
 pug = require("pug"),
 title = "Smooth Jaz Rides Again",
+port = process.env.PORT || 8000,
+
+//List of messages
 jazisms = [
   "Stick it in an iframe",
   "Maaaaaate",
@@ -18,6 +21,8 @@ jazisms = [
   "Job done",
   "Why havent you guys job-done'd this yet?"
 ],
+
+//List of entrance animations from animate.css
 animations = [
   `bounce`,
   `flash`,
@@ -83,7 +88,7 @@ function handleRequest(req,res){
   //Get Random Jazism from array
   var generatedJazism = jazisms[Math.floor(Math.random()*jazisms.length)];
 
-
+    //Log to server console
     console.log(`Request received, Jazism generated: ${generatedJazism}`)
 
     //Assemble Options
@@ -97,6 +102,7 @@ function handleRequest(req,res){
 
     //return page, close request
     res.end(page)
+
   } else {
     //return empty request for non-root requests
     res.end();
@@ -109,7 +115,7 @@ server.on('clientError', (err, socket) => {
 });
 
 //listen on port
-server.listen(process.env.PORT || 8000)
+server.listen(port)
 
 /*
 * HELPER FUNCTIONS
@@ -127,14 +133,20 @@ function getRandomColor() {
 
 //Wrap letters in span, attach inline color, return string
 function fuckItUp(string){
+
   var letters = string.split("");
 
   for(var i=0;i<letters.length;i++){
 
+    //Substitute non-breaking space for whitespace char
     letters[i] = (letters[i] === " ") ? "&nbsp;" : letters[i];
 
     var randomanimation = animations[Math.floor(Math.random()*animations.length)];
     letters[i] = `<span class="animated `+randomanimation+`" style="display:inline-block;color:`+getRandomColor()+`">`+letters[i]+`</span>`;
+
   }
+
+  //return reassembled string
   return letters.join("");
+
 }
