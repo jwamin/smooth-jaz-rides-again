@@ -51,7 +51,6 @@ animations = [
   `rotateInDownRight`,
   `rotateInUpLeft`,
   `rotateInUpRight`,
-  `hinge`,
   `rollIn`,
   `zoomIn`,
   `zoomInDown`,
@@ -78,6 +77,8 @@ var server = http.createServer(handleRequest);
 
 //Handle Request
 function handleRequest(req,res){
+
+  //Do process for root request, ignore for
   if(req.url==="/"){
   //Get Random Jazism from array
   var generatedJazism = jazisms[Math.floor(Math.random()*jazisms.length)];
@@ -97,6 +98,7 @@ function handleRequest(req,res){
     //return page, close request
     res.end(page)
   } else {
+    //return empty request for non-root requests
     res.end();
   }
 }
@@ -126,8 +128,9 @@ function getRandomColor() {
 //Wrap letters in span, attach inline color, return string
 function fuckItUp(string){
   var letters = string.split("");
-  var randomanimation = animations[Math.floor(Math.random()*animations.length)];
+
   for(var i=0;i<letters.length;i++){
+    var randomanimation = animations[Math.floor(Math.random()*animations.length)];
     letters[i] = `<span class="animated `+randomanimation+`" style="display:inline-block;color:`+getRandomColor()+`">`+letters[i]+`</span>`;
   }
   return letters.join("");
