@@ -31,7 +31,7 @@ jazisms = [
   "MAAAAAAAAAAATTTTTEEEEEEEE",
   "Stick it on heroku",
   "Chromecast it.",
-  "I've made it to Oxford"
+  "I've made it to Dubai"
 ],
 
 //List of entrance animations from animate.css
